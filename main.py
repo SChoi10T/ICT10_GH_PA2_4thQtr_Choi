@@ -1,19 +1,15 @@
-# Dog Form
+# Dog Registration Form
 from pyscript import display, document # pyright: ignore[reportMissingImports]
 
 
 class Dog:
-    def __init__(self, breed, age, name, owner):
-        self.breed = breed
-        self.age = age
+    def __init__(self, name, breed, owner, age):
         self.name = name
+        self.breed = breed
         self.owner = owner
+        self.age = age
 
-    
-    def bark(self): # creating a method
-        display('Arf '*3, target='output')
-
-# Form
+# Subclass
 class ChildDog(Dog):
         pass
 
@@ -27,4 +23,4 @@ def displaying_info(e):
 
     dogform = ChildDog(name, breed, owner, age)
 
-    display(f'{dogform.name}, {dogform.breed}, {dogform.owner}, {dogform.age}', target='output')
+    display(f'Information: NAME: {dogform.name}, BREED: {dogform.breed}, OWNER: {dogform.owner}, AGE: {dogform.age}', target='output')
